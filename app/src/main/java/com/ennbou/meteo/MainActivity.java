@@ -35,12 +35,10 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
 
     private Toolbar toolBar;
     private RequestQueue requestQueue;
-    private StringRequest stringRequest;
     private MenuItem searchItem;
 
     private ImageView img;
     private TextView temp, tempMax, tempMin, humidity, pressure, description, dateTime, cityNameTxt;
-    private SearchView search;
 
     final String URL = "https://api.openweathermap.org/data/2.5/weather?q=%s&units=metric&appid=73a8d3d048f202365fd63c5c53338843";
     final String URL_ICON = "http://openweathermap.org/img/wn/%s@2x.png";
