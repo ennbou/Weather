@@ -80,8 +80,6 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
                             public void onResponse(String response) {
                                 try {
 
-                                    Thread.sleep(10000);
-
                                     JSONObject data = new JSONObject(response);
                                     JSONObject weather = data.getJSONArray("weather").getJSONObject(0);
                                     JSONObject mainData = data.getJSONObject("main");
@@ -126,8 +124,6 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
 
 
                                 } catch (JSONException e) {
-                                    // TODO error handling
-                                } catch (InterruptedException e) {
                                     // TODO error handling
                                 }
                             }
