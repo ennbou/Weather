@@ -10,8 +10,8 @@ le TP5 est un tres simple application pour consommer un API, ce dernier four les
     <td><b style="font-size:30px">description</b></td>
  </tr>
  <tr>
-    <td><img src="/screens/app_meteo.gif" width="30%"></td>
-    <br>
+    <td  width="30%"><img src="/screens/app_meteo.gif"></td>
+    <td>
     L’application Météo besoin d'accès à l'internet pour envoyer une demande et recevoir les données du serveur par l’API.
     Pendant le démarrage de l’application, une auto-demande les informations de météo de la ville Casablanca, cette demande faire par la libraire Volley, qui exécute la demande dans un thread indépendamment a le thread de UI. Lorsque les données reçus et la demande complété avec succès, les donnes sont stockées dans des variables locales, pour par la suite met les dans l'interface graphique.
     Le nom d’image de statuts de météo elle existe dans les données reçus par la premier demande (Volley), pour récupère cette image, j’ai utilisé la libraire Picasso, c’est très simple à utiliser et très utile pour chargement les images.</br>
@@ -30,6 +30,7 @@ le TP5 est un tres simple application pour consommer un API, ce dernier four les
 
 [![API](https://img.shields.io/badge/openweathermap-orange?label=API)](https://openweathermap.org/api) 
 [![Volley](https://img.shields.io/badge/Volley-green?label=library&logo=android)](https://developer.android.com/training/volley) 
+[![Picasso](https://img.shields.io/badge/Picasso-red?label=library&logo=square)](https://square.github.io/picasso/) 
  
  
  
@@ -81,8 +82,11 @@ StringRequest getData = new StringRequest(Request.Method.GET, URL,
                                 }
                             });
 ```
-Comme on peut l'utilise le [JsonObjectRequest](https://developer.android.com/training/volley/request) 
-pour analyse et traduise les donnees a formes des objets dans un thread separi.
-L'objet `StringRequest` il me donne une resultat à se forme de String, alors on a besoin de `Parsing Responses`.
+Comme on peut l'utiliser le [JsonObjectRequest](https://developer.android.com/training/volley/request) 
+pour analyser et traduire les donnees à se formes des objets dans un thread séparer.
+L'objet `StringRequest` il me donne une resultat à se forme d'un String, alors on a besoin de `Parsing Responses`. 
+et parfois le parsing des donnees besoin d'un temps, alors c'est obligé pour le faire ca dans un thread separer.
+
+
 
 
