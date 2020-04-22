@@ -4,8 +4,11 @@
 
 [Demo](/screens/app_meteo.gif)
 
-API utlise dans cette simple application 
 [![API](https://img.shields.io/badge/openweathermap-orange?label=API&query=https://openweathermap.org/api)](https://openweathermap.org/api) 
+
+j'utilise ce API 
+
+ 
 
 Ces sont les deux chemain URL qui j'utlise pour recupaier les information de meteo.
 
