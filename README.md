@@ -1,25 +1,32 @@
 # TP5
-## Partie de UI dans le rapport
-[rapport](screens/repport.pdf)
-##  Partie backend
+
+## Demo
+
+le TP5 est un tres simple application pour consommer un API, ce dernier four les information de meteo.
 
 <img src="/screens/app_meteo.gif" width="30%">
 
-[![API](https://img.shields.io/badge/openweathermap-orange?label=API)]
-(https://openweathermap.org/api) 
+## Partie de UI 
 
-[![Volley](https://img.shields.io/badge/Volley-green?label=library&logo=android)]
-(https://developer.android.com/training/volley) 
+
+
+##  Partie backend
+
+
+
+[![API](https://img.shields.io/badge/openweathermap-orange?label=API)](https://openweathermap.org/api) 
+[![Volley](https://img.shields.io/badge/Volley-green?label=library&logo=android)](https://developer.android.com/training/volley) 
  
  
-Premièrement, les dépendances de Volley et Picasso.
+ 
+**Premièrement**, les dépendances de Volley et Picasso.
 
 ```
 implementation 'com.android.volley:volley:1.1.1'
 implementation 'com.squareup.picasso:picasso:2.71828'
 ```
 
-Deuxièmement, la permission pour access a l'internet
+**Deuxièmement**, la permission pour access a l'internet
 `android.permission.INTERNET` est une 
 [Normal permissions](https://developer.android.com/guide/topics/permissions/overview#normal_permissions).
 ```xml
