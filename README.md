@@ -1,7 +1,5 @@
 # TP5
 
-## Demo
-
 le TP5 est un tres simple application pour consommer un API, ce dernier four les information de meteo.
 
 <table border="0">
@@ -22,7 +20,7 @@ le TP5 est un tres simple application pour consommer un API, ce dernier four les
 
 ## Partie de UI 
 
-
+<img src="/screens/ui.jpg" width="35%">
 
 ##  Partie backend
 
