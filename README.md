@@ -2,6 +2,7 @@
 
 
 [!Demo](/screens/app_meteo.gif)
+![](/screens/app_meteo.gif)
 
 [![API](https://img.shields.io/badge/openweathermap-orange?label=API&query=https://openweathermap.org/api)](https://openweathermap.org/api) 
 
