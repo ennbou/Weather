@@ -1,7 +1,6 @@
 # TP5
 
-
-![](/screens/app_meteo.gif  | height=100)
+<img src="/screens/app_meteo.gif" width="30%">
 
 [![API](https://img.shields.io/badge/openweathermap-orange?label=API&query=https://openweathermap.org/api)](https://openweathermap.org/api) 
 
