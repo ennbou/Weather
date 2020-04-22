@@ -70,7 +70,9 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
 
     public boolean getWeather(String cityName) {
         // the request do in background thread but the parsing in the UI thread,
-            // we don't need other thread to parsing and got all data, because there is a few data
+        // we don't need other thread,
+        // and also we can use JsonObjectRequest instead of StringRequest,
+        //JsonObjectRequest will do parsing in the background in separate thread
         requestQueue.add(
                 new StringRequest(Request.Method.GET, String.format(URL, cityName),
                         new Response.Listener<String>() {
@@ -81,18 +83,19 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
                                     JSONObject data = new JSONObject(response);
                                     JSONObject weather = data.getJSONArray("weather").getJSONObject(0);
                                     JSONObject mainData = data.getJSONObject("main");
-
                                     String name = data.getString("name");
-
                                     String description = weather.getString("description");
                                     String icon = weather.getString("icon");
-
                                     double temp = mainData.getDouble("temp");
                                     double tempMin = mainData.getDouble("temp_min");
                                     double tempMax = mainData.getDouble("temp_max");
                                     double pressure = mainData.getDouble("pressure");
                                     double humidity = mainData.getDouble("humidity");
                                     MainActivity activity = MainActivity.this;
+
+                                    long datetime = data.getLong("dt");
+                                    SimpleDateFormat format = new SimpleDateFormat("E MMMM d HH:mm:ss ");
+                                    String date = format.format(new Date(datetime * 1000));
 
                                     Picasso.get().load(String.format(URL_ICON, icon)).into(activity.img, new Callback() {
                                         @Override
@@ -106,9 +109,6 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
                                         }
                                     });
 
-                                    long datetime = data.getLong("dt");
-                                    SimpleDateFormat format = new SimpleDateFormat("E MMMM d HH:mm:ss ");
-                                    String date = format.format(new Date(datetime * 1000));
 
                                     activity.cityNameTxt.setText(name);
 
