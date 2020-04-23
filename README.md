@@ -10,10 +10,10 @@ le TP5 est un tres simple application pour consommer un API, ce dernier four les
  <tr>
     <td  width="30%"><img src="/screens/app_meteo.gif"></td>
     <td>
-    L’application Météo besoin d'accès à l'internet pour envoyer une demande et recevoir les données du serveur par l’API.
-    Pendant le démarrage de l’application, une auto-demande les informations de météo de la ville Casablanca, cette demande faire par la libraire Volley, qui exécute la demande dans un thread indépendamment a le thread de UI. Lorsque les données reçus et la demande complété avec succès, les donnes sont stockées dans des variables locales, pour par la suite met les dans l'interface graphique.
+    L’application Météo besoin d'accès à l'internet pour envoyer une demande et recevoir les données du serveur par l’API.</br>
+    Pendant le démarrage de l’application, une auto-demande les informations de météo de la ville Casablanca, cette demande faire par la libraire Volley, qui exécute la demande dans un thread indépendamment a le thread de UI. Lorsque les données reçus et la demande complété avec succès, les donnes sont stockées dans des variables locales, pour par la suite met les dans l'interface graphique.</br>
     Le nom d’image de statuts de météo elle existe dans les données reçus par la premier demande (Volley), pour récupère cette image, j’ai utilisé la libraire Picasso, c’est très simple à utiliser et très utile pour chargement les images.</br>
-    Le menu contient à une seule action pour faire la recherche ou pour saisir le nom de la ville, pour demande par la suite les informations de météo de cette ville, si la ville existe et le demande complète avec succès,</td>
+    Le menu contient à une seule action pour faire la recherche ou pour saisir le nom de la ville, pour demande par la suite les informations de météo de cette ville, si la ville existe et le demande complète avec succès, les donnees mettent à l'interface graphique, sinon l'interface graphique ne change pas.</td>
  </tr>
 </table>
 
