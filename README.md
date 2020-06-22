@@ -1,6 +1,6 @@
-# TP5
+# Application du meteo
 
-le TP5 est un tres simple application pour consommer un API, ce dernier four les information de meteo.
+App meteo est une tres simple application qui consommer un API, ce dernier est un API de meteo gratuit pour une limite utilisation, et cette application se fait en cadre de projet evalue au sein de l'ecole.
 
 <table border="0">
  <tr>
